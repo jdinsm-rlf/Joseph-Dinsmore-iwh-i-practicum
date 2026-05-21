@@ -1,0 +1,21 @@
+doctype html 
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 My Video Game Characters
+        a(href='/update-cobj') Add to this table
+        table
+            thead
+                tr
+                    th Name
+                    th Faction
+                    th Level
+            tbody
+                each contact in data
+                    tr
+                        td #{contact.properties.name}
+                        td #{contact.properties.faction}
+                        td #{contact.properties.level}
